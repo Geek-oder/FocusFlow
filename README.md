@@ -1,8 +1,54 @@
-# FocusFlow — A simple timer for deep work
+# 🎯 FocusFlow
 
-A distraction-free Pomodoro-style focus timer: focus sessions, short/long breaks,
-task tracking, daily goals, streaks, analytics, and a distraction-free Focus Mode.
-Installable as a Progressive Web App (PWA).
+**A simple, beautiful timer for deep work.**
+
+FocusFlow is a distraction-free Pomodoro-style productivity timer — focus
+sessions, intentional breaks, task tracking, daily goals, streaks, and
+analytics, wrapped in a calm, modern interface. It's a single self-contained
+web app: no build step, no backend, no dependencies to install. Open it and
+go.
+
+**[▶ Try the live demo](https://claude.ai/artifact/UrPm6uNaNaSSD22gCoUz8a)**
+
+<!--
+  Add a screenshot or GIF here once you've deployed:
+  ![FocusFlow screenshot](./screenshot.png)
+-->
+
+## ✨ Features
+
+- ⏱ **Accurate, reliable timer** — timestamp-based, so it stays correct even
+  when the tab is backgrounded or the computer sleeps
+- 🔁 **Smart Pomodoro cycle** — configurable focus/short break/long break
+  durations, with optional auto-start between sessions
+- ✅ **Task tracking** — link tasks to sessions and watch estimated vs.
+  completed sessions add up
+- 📊 **Analytics dashboard** — daily focus time, weekly chart, plain-language
+  insights, longest session, and more
+- 🔥 **Streaks & daily goals** — build consistency without pressure, with a
+  satisfying completion animation when you hit your goal
+- 🧘 **Focus Mode** — a fullscreen, distraction-free view for when you really
+  need to lock in
+- 🌗 **Light / dark / system themes** with 6 accent colors
+- 🔔 **Notifications & generated sounds** — no external audio files, nothing
+  to license
+- ⌨️ **Full keyboard control** — `Space` start/pause, `R` reset, `S` skip,
+  `F` focus mode, `Esc` exit, `M` mute
+- 📱 **Installable PWA** — add it to your home screen, works offline
+- 💾 **Private by default** — all data stays in your browser's `localStorage`;
+  no account, no server, no tracking
+
+## Quick start
+
+```bash
+git clone https://github.com/yourusername/focusflow.git
+cd focusflow
+python3 -m http.server 8080
+# open http://localhost:8080
+```
+
+No install, no build — it's plain HTML/CSS/JS. See **Deploy** below to put
+it on the web.
 
 ## Project structure
 
@@ -30,19 +76,8 @@ which means:
 
 ## Run it locally
 
-No install needed. Any static file server works, e.g.:
-
-```bash
-cd focusflow-pwa
-python3 -m http.server 8080
-# open http://localhost:8080
-```
-
-or, with Node installed:
-
-```bash
-npx serve .
-```
+Any static file server works — see **Quick start** above (`npx serve .` is
+an equally good alternative to the Python server shown there).
 
 Opening `index.html` directly via `file://` also works for the timer itself,
 but the service worker (offline support) and manifest only activate when
@@ -160,3 +195,15 @@ Before shipping changes, manually verify:
 - **No separate marketing landing page** — the app opens directly into the
   Focus view; a landing page is a natural addition if you deploy this
   publicly and want a pre-app pitch.
+
+## Contributing
+
+Issues and pull requests are welcome. Since there's no build step, the whole
+app lives in `index.html` — open it, find the relevant section (timer engine,
+tasks, analytics, or settings, each clearly commented), and edit directly.
+
+## License
+
+No license has been added yet — all rights reserved by default until one is.
+If you want this project to be open source, add a `LICENSE` file (MIT is a
+common, permissive choice for a project like this) and mention it here.

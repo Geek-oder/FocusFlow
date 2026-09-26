@@ -1,0 +1,16 @@
+{
+  "name": "FocusFlow — A simple timer for deep work",
+  "short_name": "FocusFlow",
+  "description": "A distraction-free productivity timer for focused work and intentional breaks.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f7f7f9",
+  "theme_color": "#6C5CE7",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

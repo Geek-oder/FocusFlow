@@ -10,11 +10,6 @@ go.
 
 **[▶ Try the live demo](https://claude.ai/artifact/UrPm6uNaNaSSD22gCoUz8a)**
 
-<!--
-  Add a screenshot or GIF here once you've deployed:
-  ![FocusFlow screenshot](./screenshot.png)
--->
-
 ## ✨ Features
 
 - ⏱ **Accurate, reliable timer** — timestamp-based, so it stays correct even
@@ -83,57 +78,6 @@ Opening `index.html` directly via `file://` also works for the timer itself,
 but the service worker (offline support) and manifest only activate when
 served over `http://localhost` or `https://`.
 
-## Deploy
-
-Pick any static host — there's no environment variables and no server-side code.
-
-### Netlify
-1. Go to [app.netlify.com/drop](https://app.netlify.com/drop)
-2. Drag the `focusflow-pwa` folder in
-3. Done — live instantly, with a shareable URL
-
-Or via CLI: `netlify deploy --dir=focusflow-pwa --prod`
-
-### Vercel
-```bash
-cd focusflow-pwa
-vercel --prod
-```
-Vercel auto-detects it as a static site — no build command required.
-
-### Cloudflare Pages
-1. Create a new Pages project
-2. Upload the `focusflow-pwa` folder directly (or connect a git repo containing it)
-3. Build command: *(leave blank)* · Output directory: `/`
-
-### GitHub Pages
-```bash
-cd focusflow-pwa
-git init
-git add .
-git commit -m "FocusFlow"
-git branch -M main
-git remote add origin <your-repo-url>
-git push -u origin main
-```
-Then in the repo settings, enable **Pages** → deploy from `main` branch, root folder.
-Your app will be live at `https://<username>.github.io/<repo>/`.
-
-> Note: GitHub Pages serves from a subpath (`/repo-name/`). The manifest and
-> service worker paths in this project use relative URLs (`./manifest.json`,
-> `./sw.js`) specifically so this works without edits.
-
-## Installing as an app (PWA)
-
-Once deployed over HTTPS:
-- **Desktop Chrome/Edge:** address bar → install icon, or menu → "Install FocusFlow"
-- **Android Chrome:** menu → "Add to Home screen"
-- **iOS Safari:** Share → "Add to Home Screen"
-
-Installed, it opens in its own window/icon with no browser chrome, and the
-service worker lets the app shell load even without a network connection
-(your data was already local-only via `localStorage`, so nothing changes there).
-
 ## Data & privacy
 
 All data (tasks, stats, streaks, settings) is stored in the browser's
@@ -201,9 +145,3 @@ Before shipping changes, manually verify:
 Issues and pull requests are welcome. Since there's no build step, the whole
 app lives in `index.html` — open it, find the relevant section (timer engine,
 tasks, analytics, or settings, each clearly commented), and edit directly.
-
-## License
-
-No license has been added yet — all rights reserved by default until one is.
-If you want this project to be open source, add a `LICENSE` file (MIT is a
-common, permissive choice for a project like this) and mention it here.

@@ -10,6 +10,8 @@ go.
 
 **[▶ Try the live demo](https://claude.ai/artifact/UrPm6uNaNaSSD22gCoUz8a)**
 
+![FocusFlow screenshot](./screenshot.png)
+
 ## ✨ Features
 
 - ⏱ **Accurate, reliable timer** — timestamp-based, so it stays correct even
